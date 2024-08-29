@@ -1,0 +1,11 @@
+services:
+  node-app:
+    build:
+      context: .
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3333:8080
+    volumes:
+      - ./:/app # Mapeia o código-fonte
+      - /app/node_modules # Isola node_modules no container
